@@ -1,4 +1,22 @@
-.container img {
-        width: 100%;
-        height: auto;
-    }
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+  
+.form-group{
+    padding: 15px;
+}
+
+button { 
+    width: 30%;
+}
