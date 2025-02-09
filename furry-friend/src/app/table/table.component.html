@@ -1,4 +1,30 @@
 <table class="table">
+  <tbody>
+    <tr *ngFor="let row of matrix">
+      <td *ngFor="let card of row"><app-card [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}}></app-card></td>
+    </tr>
+  </tbody>
+  
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table class="table">
 
     <tbody>
       <tr>
@@ -37,7 +63,7 @@
         
       </tr>
     </tbody>
-  </table>
+  </table> -->
 
 
 
