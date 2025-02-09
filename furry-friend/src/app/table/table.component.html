@@ -1,12 +1,13 @@
 <table class="table">
   <tbody>
-    <tr *ngFor="let row of matrix">
+    <tr *ngFor="let row of createMatrix(paginatedData)">
       <td *ngFor="let card of row"><app-card [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}}></app-card></td>
     </tr>
   </tbody>
   
 </table>
 
+<app-pagination [totalItems]="data.length" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" (onClick)="changePage($event)"></app-pagination>
 
 
 
@@ -18,52 +19,6 @@
 
 
 
-
-
-
-
-
-
-<!-- <table class="table">
-
-    <tbody>
-      <tr>
-        
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        
-      </tr>
-      <tr>
-        
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        
-      </tr>
-      <tr>
-        
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        
-      </tr>
-      <tr>
-        
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        
-      </tr>
-      <tr>
-        
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        <td><app-card id="1" name="mark" breed="poodle" [age]="1" zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card></td>
-        
-      </tr>
-    </tbody>
-  </table> -->
 
 
 
