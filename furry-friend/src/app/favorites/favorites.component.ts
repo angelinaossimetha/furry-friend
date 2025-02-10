@@ -7,6 +7,8 @@ import { TableComponent } from '../table/table.component';
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.css'
 })
-export class FavoritesComponent {
+export class FavoritesComponent { 
+  isVisibleMatchBtn: boolean = true;
+  isVisibleLogoutBtn: boolean = true; 
 
 }

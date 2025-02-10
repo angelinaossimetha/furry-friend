@@ -10,5 +10,8 @@ import { TableComponent } from '../table/table.component';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
+  isVisibleFavoritesBtn: boolean = true; 
+  isVisibleMatchBtn: boolean = true;
+  isVisibleLogoutBtn: boolean = true; 
 
 }
