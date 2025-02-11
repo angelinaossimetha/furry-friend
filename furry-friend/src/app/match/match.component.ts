@@ -9,5 +9,5 @@ import { CardComponent } from '../card/card.component';
   styleUrl: './match.component.css'
 })
 export class MatchComponent {
-
+  isVisibleLogoutBtn: boolean = true; 
 }

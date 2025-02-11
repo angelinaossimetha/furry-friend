@@ -1,17 +1,23 @@
 .container { 
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
+    /* position: relative; */
+     margin-bottom: 70px;
 }
 .container img {
+    /* position: absolute; */
     width: 45%;
     height: auto;
-    margin-left: 450px;
+    margin-left: 25%;
+    
 }
 
 #button-container { 
+    margin-left: auto;
     display: flex;
-    margin-left: 100px;
+    margin-left: 110px;
     column-gap: 30px;
 }
 
