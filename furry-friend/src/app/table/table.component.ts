@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { NgFor } from '@angular/common';
@@ -10,6 +10,7 @@ import { NgFor } from '@angular/common';
   styleUrl: './table.component.css'
 })
 export class TableComponent {
+  // raw data
   data = [ 
    { 
       id: 1, 
@@ -459,38 +460,80 @@ zipCode: '12345'
     age: 2,
     zipCode: '12348'
     }, ]
+  // make data into cardsArray 
+  // cardsArray : CardComponent[] = [];
+  finalData : any[][] = [];
+
   itemsPerPage: number = 9; 
   currentPage: number = 1; 
 
+  toggleFavorite(id:number, row: number, col: number) : void {
+    const previousIsFavorite: boolean =  this.finalData[row][col].isFavorite; 
+    console.log("previous "+ previousIsFavorite)
+    this.finalData[row][col].isFavorite = !previousIsFavorite
+    console.log("new "+ this.finalData[row][col].isFavorite)
+    // this.data[index].isFavorite = 
+    // console.log('Button clicked!');
+    // console.log("before: " + this.isFavorite)
+    // this.isFavorite = !this.isFavorite
+    // console.log("after: " + this.isFavorite)
+  }
 
-  constructor() { }
+
+  constructor() {
+    // this.cardsArray = this.makeCardsArray(this.data)
+    this.finalData = this.createMatrix(this.paginatedData(this.data))
+    // this.finalData = this.createMatrix(this.paginatedData)
+   
+   }
+
+   
+    
 
 
-  createMatrix(dataArr: CardComponent[]){
-    let row: CardComponent[]  = []
-    let matrix: CardComponent[][]  = [];
+  createMatrix(dataArr: any[]){
+    // createMatrix(dataArr: CardComponent[]){
+    let row: any[]  = []
+    // let row: CardComponent[]  = []
+    // let matrix: CardComponent[][]  = [];
+    let matrix: any[][]  = [];
     for (let i = 0; i < dataArr.length + 1; i++) {
       if (i % 3 == 0 || (i === dataArr.length && row.length)) { 
         matrix.push(row);
         row = []
       }
-      if ( i < dataArr.length) row.push(dataArr[i]);
+      if ( i < dataArr.length)
+        // const item  = dataArr[i];
+        // const card = new CardComponent(dataArr[i].id, dataArr[i].name, dataArr[i].breed, dataArr[i].img, dataArr[i].age,dataArr[i].zipCode);
+        dataArr[i].isFavorite = false; 
+        row.push(dataArr[i]);
     }
       return matrix; 
   }
 
+  // makeCardsArray(dataArr: any[]) { 
+  //   const cardsArray: CardComponent[] = [];
 
-  get paginatedData() { 
+  //   for(let i = 0; i < dataArr.length; i++) { 
+  //     cardsArray[i] = new CardComponent(dataArr[i].id, dataArr[i].name, dataArr[i].breed, dataArr[i].img, dataArr[i].age,dataArr[i].zipCode)
+  //   }
+  //   return cardsArray;
+
+  // }
+
+
+  paginatedData(dataArr : any[]) { 
+    // paginatedData(dataArr : CardComponent[]) { 
     const start = (this.currentPage -1) * this.itemsPerPage; 
     const end = start + this.itemsPerPage;  
 
-    return this.data.slice(start,end);
+    return dataArr.slice(start,end);
   }
 
   changePage(page: number) { 
     this.currentPage = page;
   }
 
-  
+
 
 }

@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+  <body>
 
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" [src]=img alt="dog">
@@ -13,11 +13,55 @@
           <p class="card-text">Breed: {{breed}}</p>
           <p class="card-text">Age: {{age}}</p>
           <p class="card-text">Zipcode: {{zipCode}}</p>
-            <button type="submit" class="btn btn-dark">Add favorite</button>
-       
+
+
+             <div (click)="toggleFavorite()">
+            <i id="heart-empty"  *ngIf="!isFavorite" class='fa fa-heart-o' style='font-size:24px'></i>
+            <i id="heart-fill"  *ngIf="isFavorite" class='fa fa-heart' style='font-size:24px;color: red;'></i>
+             </div> 
+
+          <!-- <button (click)="toggleFavorite()">
+            <i id="heart-empty"  *ngIf="!isFavorite" class='fa fa-heart-o' style='font-size:24px'></i>
+            <i id="heart-fill"  *ngIf="isFavorite" class='fa fa-heart' style='font-size:24px'></i>
+           </button> -->
+
+           <!-- <div class="fa fa-heart-o" [class.active]="isFavorite" (click)="isFavorite = !isFavorite">
+            Click me
         </div>
-      </div>
+
+        <div class="fa fa-heart-fill" [class.active]="!isFavorite" (click)="isFavorite = !isFavorite">
+          Click me
+      </div> -->
+
+           <!-- <button (click)="this.isFavorite = !isFavorite">
+            <i id="heart"  *ngIf="!isFavorite" class='bi bi-heart' style='font-size:24px'></i>
+            <i id="heart"  *ngIf="isFavorite" class='bi bi-heart-fill' style='font-size:24px'></i>
+           </button> -->
+
+
+          <!-- <div (click)="toggleFavorite()">
+            <i id="heart"  *ngIf="!isFavorite" class='bi bi-heart' style='font-size:24px'></i>
+            <i id="heart"  *ngIf="isFavorite" class='bi bi-heart-fill' style='font-size:24px'></i>
+          </div> -->
+<!-- 
+          <button (click)="toggleFavorite()">
+            <i id="heart"  *ngIf="!isFavorite" class='bi bi-heart' style='font-size:24px'></i>
+            <i id="heart"  *ngIf="isFavorite" class='bi bi-heart-fill' style='font-size:24px'></i>
+          </button> -->
+
+            <!-- <i id="heart" class='bi' [class.bi-heart]="!isFavorite" [class.bi-heart-fill]="isFavorite"   (click)="toggleFavorite()" *ngIf="!isFavorite"  style='font-size:24px'></i>
+             -->
+            <!-- <button (click)="toggleFavorite()" >
+              <i [ngClass]="{'bi-heart':!isFavorite, 'bi-heart-fill': isFavorite}"></i>
+            </button> -->
+
+         
+          
+        
+    </div> 
+    </div>
     
 
-</body>
+  </body>
+  
 </html>

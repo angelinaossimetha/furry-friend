@@ -1,7 +1,9 @@
 <table class="table">
   <tbody>
-    <tr *ngFor="let row of createMatrix(paginatedData)">
-      <td *ngFor="let card of row"><app-card [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}}></app-card></td>
+    <tr *ngFor="let row of finalData; let r = index">
+      <td *ngFor="let card of row; let c = index">
+        <app-card (toggleFavoriteEvent)="toggleFavorite(card.id, r,c)"  [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}}>
+        </app-card></td>
     </tr>
   </tbody>
   

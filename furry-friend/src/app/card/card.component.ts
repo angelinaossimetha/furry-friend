@@ -1,16 +1,44 @@
-import { Component, Input } from '@angular/core';
-
+import { Component,  EventEmitter,  Input, Optional, Output} from '@angular/core';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [CommonModule ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
+
 export class CardComponent {
-  @Input() id:number = 0;
+  @Input() id: number = 0;
   @Input() name: string = ''; 
   @Input() breed: string ='';
   @Input() img: string = '';
   @Input() age: number = 0;
   @Input() zipCode: string = '';
+  isFavorite: boolean  = false;
+ 
+  iconClass?: string = 'fa fa-heart-o';
+  @Output() toggleFavoriteEvent = new EventEmitter<Number>();
+
+  constructor() {
+   
+
+
+  }
+
+  toggleFavorite() : void {
+    console.log('lol')
+    this.toggleFavoriteEvent.emit(this.id)
+    this.isFavorite = !this.isFavorite
+    // console.log('Button clicked!');
+    // console.log("before: " + this.isFavorite)
+    // this.isFavorite = !this.isFavorite
+    // console.log("after: " + this.isFavorite)
+  }
+
+
+   
+
+   
+  
+
 }
