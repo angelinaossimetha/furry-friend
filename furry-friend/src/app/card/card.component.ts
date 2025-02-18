@@ -26,13 +26,10 @@ export class CardComponent {
   }
 
   toggleFavorite() : void {
-    console.log('lol')
+   
     this.toggleFavoriteEvent.emit(this.id)
     this.isFavorite = !this.isFavorite
-    // console.log('Button clicked!');
-    // console.log("before: " + this.isFavorite)
-    // this.isFavorite = !this.isFavorite
-    // console.log("after: " + this.isFavorite)
+  
   }
 
 
