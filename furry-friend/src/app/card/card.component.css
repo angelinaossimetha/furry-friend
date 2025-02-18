@@ -7,7 +7,9 @@
   }
 
 img { 
+  width: 100%;
+  height: auto;
   
-  width: 286px;
-  height: 229px;
+  /* width: 286px;
+  height: 229px; */
 }
