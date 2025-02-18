@@ -1,59 +1,46 @@
 <div id="filter" class="form-check p-2 flex-fill bd-highlight">
     <!-- div -->
-    <label for="name">Sort by</label>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder" checked>
-      <label class="form-check-label" for="ascendingOrder">
-        breed A-Z
-      </label>
-    </div>
-
-    <!-- div -->
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
-      <label class="form-check-label" for="descendingOrder">
-        breed Z-A
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder">
-      <label class="form-check-label" for="ascendingOrder">
-        age youngest to oldest
-      </label>
-    </div>
-
-    <!-- div -->
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
-      <label class="form-check-label" for="descendingOrder">
-        age oldest to youngest
-      </label>
-    </div>
+     <div id="sort"> 
+      <label id="sort-by" for="name">Sort by</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder" checked>
+        <label class="form-check-label" for="ascendingOrder">
+          breed A-Z
+        </label>
+      </div>
   
-    <label for="name">Breeds</label>
+      <!-- div -->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
+        <label class="form-check-label" for="descendingOrder">
+          breed Z-A
+        </label>
+      </div>
+  
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder">
+        <label class="form-check-label" for="ascendingOrder">
+          age youngest to oldest
+        </label>
+      </div>
+  
+      <!-- div -->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
+        <label class="form-check-label" for="descendingOrder">
+          age oldest to youngest
+        </label>
+      </div>
+    </div>
+   
+  
+    <label id="breeds" for="name">Breeds</label>
     <!-- div -->
-    <div class="form-check">
+    <div *ngFor="let breed of breeds" class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
       <label class="form-check-label" for="flexCheckDefault">
-        Poodle
+        {{breed}}
       </label>
     </div>
 
-    <!-- div -->
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Multi
-      </label>
-    </div>
-  
-  
-  
-      <label for="name">Minimum age</label>
-      <input type="number" class="form-control" id="minimumAge" placeholder="minimumAge">
-  
-      
-      <label for="name">Maximum age</label>
-      <input type="number" class="form-control" id="maximumAge" placeholder="maximumAge">
   </div>
