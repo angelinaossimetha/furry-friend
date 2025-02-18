@@ -1,0 +1,452 @@
+{
+    "dogs":[
+{ 
+      "id": 1, 
+      "name": "Snickerdoodle",  
+      "breed": "Goldendoodle",
+      "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+      "age": 1,
+      "isFavorite": false, "zipCode": "12345"
+   }, 
+   { 
+    "id": 2, 
+    "name": "Golden",  
+    "breed": "Golden Retriever",
+    "img": "https://imgs.search.brave.com/h7FZRvL1aJfSw6LGs0bdzrrVtecByfVjBREant57y8Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/ZWxlY3RpdmUtZm9j/dXMtc2hvdC1hZG9y/YWJsZS1nb2xkZW4t/cmV0cmlldmVyLW91/dGRvb3JzXzE4MTYy/NC00NTQ2Ni5qcGc_/c2VtdD1haXNfaHli/cmlk",
+    "age": 3,
+    "isFavorite": false, "zipCode": "12348"
+ }, 
+ { 
+  "id": 3, 
+  "name": "Polar Bear",  
+  "breed": "Bichon Frise",
+  "img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+  "age": 2,
+  "isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 4, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://imgs.search.brave.com/_po6ShqpV0p43xMGbfVhMG4zS9RQOejTsoBv63KXC08/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZG9nc3Rlci5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDMvb3JhbmdlLWhh/dmFuZXNlLXB1cHB5/LWRvZ19Eb3Jyb3R5/YS1NYXRoZV9TaHV0/dGVyc3RvY2stODAw/eDUzNC5qcGc",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 5, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 6, 
+  "name": "Polar Bear",  
+  "breed": "Bichon Frise",
+  "img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+  "age": 2,
+  "isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 7, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 8, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 9, 
+  "name": "Polar Bear",  
+  "breed": "Bichon Frise",
+  "img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+  "age": 2,
+  "isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 10, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 11, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 12, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 13, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 14, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 15, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 16, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+},  
+{ 
+"id": 17, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 18, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 19, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 20, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 21, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 22, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 23, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 24, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 25, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 26, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 27, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 28, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 29, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 30, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 31, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 32, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 33, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 34, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 35, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+  "id": 36, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 37, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 38, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 39, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 40, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 41, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 42, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 43, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 44, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 45, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 46, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 47, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 48, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 49, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 50, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 51, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+"id": 52, 
+"name": "Teddy",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547557142/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 53, 
+"name": "Polar Bear",  
+"breed": "Bichon Frise",
+"img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+"age": 2,
+"isFavorite": false, "zipCode": "12348"
+}, 
+{ 
+"id": 54, 
+"name": "Snickerdoodle",  
+"breed": "Goldendoodle",
+"img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+"age": 4,
+"isFavorite": false, "zipCode": "12345"
+}, 
+{ 
+  "id": 55, 
+  "name": "Snickerdoodle",  
+  "breed": "Goldendoodle",
+  "img": "https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=",
+  "age": 4,
+  "isFavorite": false, "zipCode": "12345"
+  },
+  { 
+    "id": 56, 
+    "name": "Polar Bear",  
+    "breed": "Bichon Frise",
+    "img": "https://imgs.search.brave.com/KhSJ7e3WT1qf-VTj7pT3A1ZPcvlwwjWE9D_wlg-mXA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzL2NmOS93aGl0/ZS1kb2ctZnJvbGlj/a2luZy1kb2NrLTA0/MTAtNTY5ODcxMy5q/cGc_Zm10",
+    "age": 2,
+    "isFavorite": false, "zipCode": "12348"
+    }
+ ]
+}

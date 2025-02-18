@@ -14,7 +14,7 @@ export class CardComponent {
   @Input() img: string = '';
   @Input() age: number = 0;
   @Input() zipCode: string = '';
-  isFavorite: boolean  = false;
+  @Input() isFavorite: boolean  = false;
  
   iconClass?: string = 'fa fa-heart-o';
   @Output() toggleFavoriteEvent = new EventEmitter<Number>();
