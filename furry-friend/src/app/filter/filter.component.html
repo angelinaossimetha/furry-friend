@@ -3,31 +3,31 @@
      <div id="sort"> 
       <label id="sort-by" for="name">Sort by</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder" checked>
-        <label class="form-check-label" for="ascendingOrder">
+        <input class="form-check-input" type="radio" name="breedAscending" id="breedAscending" value="breedAscending" [(ngModel)]="sortByField" checked>
+        <label class="form-check-label" for="breedAscending">
           breed A-Z
         </label>
       </div>
   
       <!-- div -->
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
-        <label class="form-check-label" for="descendingOrder">
+        <input class="form-check-input" type="radio" name="breedDescending" id="breedDescending" value="breedDescending" [(ngModel)]="sortByField">
+        <label class="form-check-label" for="breedDescending">
           breed Z-A
         </label>
       </div>
   
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="ascendingOrder">
-        <label class="form-check-label" for="ascendingOrder">
+        <input class="form-check-input" type="radio" name="ageAscending" id="ageAscending" value="ageAscending" [(ngModel)]="sortByField">
+        <label class="form-check-label" for="ageAscendingr">
           age youngest to oldest
         </label>
       </div>
   
       <!-- div -->
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="descendingOrder">
-        <label class="form-check-label" for="descendingOrder">
+        <input class="form-check-input" type="radio" name="ageDescending" id="ageDescending" value="ageDescending" [(ngModel)]="sortByField">
+        <label class="form-check-label" for="ageDescending">
           age oldest to youngest
         </label>
       </div>

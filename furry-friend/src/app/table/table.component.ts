@@ -13,22 +13,50 @@ import * as dogsData from '../../../public/dogs.json'
 export class TableComponent {
   // raw data
   data = dogsData.dogs;
+  sortByField: string = 'breedAscending';
 
 
   itemsPerPage: number = 9; 
   currentPage: number = 1; 
 
   toggleFavorite(id:number) : void {
-    const previousIsFavorite: boolean =  this.data[id-1].isFavorite; 
-    this.data[id-1].isFavorite = !previousIsFavorite
-  
-   
+    console.log("id clicked" + id)
+    // const previousIsFavorite: boolean =  this.data[id-1].isFavorite; 
+    // this.data[id-1].isFavorite = !previousIsFavorite
+
+    for (let i = 0; i < this.data.length; i++) { 
+      if (this.data[i].id === id) { 
+        const previousIsFavorite: boolean =  this.data[i].isFavorite; 
+        this.data[i].isFavorite = !previousIsFavorite
+
+      }
+    }
+  }
+
+  ngOnInit() {
+    this.sortData(); 
   }
 
 
-  constructor() {
-    
-   }
+  sortData() { 
+    switch (this.sortByField) {
+      case 'ageAscending':
+        this.data.sort((a,b) => a.age - b.age); 
+        break;
+      case 'ageDescending': 
+        this.data.sort((a,b) => b.age - a.age);
+        break; 
+      case 'breedDescending':
+        this.data.sort((a, b) => b.breed.toLowerCase().localeCompare(a.breed.toLowerCase()));
+        break;
+      default: // breedAscending
+        this.data.sort((a, b) => a.breed.toLowerCase().localeCompare(b.breed.toLowerCase()));
+    }
+  }
+
+
+
+
 
 
 
