@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { NgFor } from '@angular/common';
@@ -13,11 +13,14 @@ import * as dogsData from '../../../public/dogs.json'
 export class TableComponent {
   // raw data
   data = dogsData.dogs;
-  sortByField: string = 'breedAscending';
+  @Input() sortByField: string = 'breedAscending';
 
 
   itemsPerPage: number = 9; 
   currentPage: number = 1; 
+ 
+
+  // @Output() toggleSortByEvent = new EventEmitter<String>();
 
   toggleFavorite(id:number) : void {
     console.log("id clicked" + id)
@@ -33,9 +36,25 @@ export class TableComponent {
     }
   }
 
+
+
   ngOnInit() {
     this.sortData(); 
   }
+
+
+  ngOnChanges() {
+    this.sortData()
+  }
+
+  // toggleSortBy(sortByField: string) : void {
+  //   console
+  //   console.log(sortByField);
+  //   this.toggleSortByEvent.emit(this.sortByField)
+  //   this.sortByField = sortByField
+  //   console.log(this.sortByField);
+  
+  // }
 
 
   sortData() { 

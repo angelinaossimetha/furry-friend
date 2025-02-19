@@ -1,0 +1,15 @@
+#filter { 
+    width: 600px;
+}
+
+#sort { 
+    margin-bottom: 80px;
+}
+
+#sort-by { 
+    font-weight: bold;
+}
+
+#breeds { 
+    font-weight: bold;
+}

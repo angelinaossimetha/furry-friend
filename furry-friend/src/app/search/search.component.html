@@ -58,7 +58,8 @@
   
       <div class="p-2 flex-fill bd-highlight"> 
         <h1>Results</h1>
-        <app-table></app-table>
+        <app-table [sortByField]="sortByField"></app-table>
+        <!-- <app-table (toggleSortByEvent)="toggleSortBy(sortByField)"></app-table> -->
       </div>
 
   </div>
