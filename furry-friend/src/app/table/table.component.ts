@@ -14,6 +14,7 @@ export class TableComponent {
   // raw data
   data = dogsData.dogs;
   @Input() sortByField: string = 'breedAscending';
+  @Input() filterBreedsArray: string[] = [];
 
 
   itemsPerPage: number = 9; 
@@ -40,11 +41,13 @@ export class TableComponent {
 
   ngOnInit() {
     this.sortData(); 
+    // if(this.filterBreedsArray.length > 0) this.filterData()
   }
 
 
   ngOnChanges() {
     this.sortData()
+    if (this.filterBreedsArray.length > 0) this.filterData()
   }
 
   // toggleSortBy(sortByField: string) : void {
@@ -71,6 +74,10 @@ export class TableComponent {
       default: // breedAscending
         this.data.sort((a, b) => a.breed.toLowerCase().localeCompare(b.breed.toLowerCase()));
     }
+  }
+
+  filterData() {
+    this.data =  this.data.filter(item => this.filterBreedsArray.includes(item.breed));
   }
 
 

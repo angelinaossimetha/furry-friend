@@ -47,18 +47,28 @@
     
       <label id="breeds" for="name">Breeds</label>
       <!-- div -->
-      <div *ngFor="let breed of breeds" class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <!-- <div *ngFor="let breed of breeds" class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="{{breed}}" name="{{breed}}" value="{{breed}}">
         <label class="form-check-label" for="flexCheckDefault">
           {{breed}}
         </label>
+      </div> -->
+
+      <div [formGroup]="checkboxForm" *ngFor="let breed of breeds; let i = index" class="form-check">
+        <div formArrayName="breedCheckArray">
+          <input class="form-check-input" type="checkbox"  id="{{breed}}" name="{{breed}}" value="{{breed}}" (change)="updateFilterBreedArray(breed)">
+          <label class="form-check-label" for="{{breed}}">
+          {{breed}}
+        </label>
+        </div>
+        
       </div>
   
     </div>
   
       <div class="p-2 flex-fill bd-highlight"> 
         <h1>Results</h1>
-        <app-table [sortByField]="sortByField"></app-table>
+        <app-table [sortByField]="sortByField" [filterBreedsArray]="filterBreedsArray"></app-table>
         <!-- <app-table (toggleSortByEvent)="toggleSortBy(sortByField)"></app-table> -->
       </div>
 
