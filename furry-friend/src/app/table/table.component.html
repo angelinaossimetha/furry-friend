@@ -1,17 +1,30 @@
 
 
-<div class="row card-group">
-  <div class="col-4"  *ngFor="let card of paginatedData">
-      <!-- <div class="card"> -->
-        <app-card (toggleFavoriteEvent)="toggleFavorite(card.id)"  [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}} [isFavorite]=card.isFavorite >
-        </app-card>
-      <!-- </div> -->
+<ng-container *ngIf="!isFilter">
+  <div  class="row card-group">
+    <div class="col-4"  *ngFor="let card of paginatedData">
+        <!-- <div class="card"> -->
+          <app-card (toggleFavoriteEvent)="toggleFavorite(card.id)"  [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}} [isFavorite]=card.isFavorite >
+          </app-card>
+        <!-- </div> -->
+    </div>
   </div>
-</div>
-
   <app-pagination [totalItems]="data.length" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" (onClick)="changePage($event)"></app-pagination>
+</ng-container>
 
 
+<ng-container *ngIf="isFilter"> 
+  <div class="row card-group">
+    <!-- <div class="col-4"  *ngFor="let card of paginatedFilteredData"> -->
+      <div class="col-4"  *ngFor="let card of paginatedFilteredDataArray">
+        <!-- <div class="card"> -->
+          <app-card (toggleFavoriteEvent)="toggleFavorite(card.id)"  [id]=card.id name={{card.name}} breed={{card.breed}} [age]=card.age zipCode={{card.zipCode}} img={{card.img}} [isFavorite]=card.isFavorite >
+          </app-card>
+        <!-- </div> -->
+    </div>
+  </div>
+  <app-pagination  [totalItems]="filteredDataLen" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" (onClick)="changePage($event)"></app-pagination>  
+</ng-container>
 
 
 

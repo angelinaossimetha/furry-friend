@@ -1,12 +1,12 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import {  Component, EventEmitter, Input, IterableDiffers, Output,  ChangeDetectorRef} from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import * as dogsData from '../../../public/dogs.json'
 
 @Component({
   selector: 'app-table',
-  imports: [NgFor, CardComponent, PaginationComponent ],
+  imports: [NgFor, CommonModule, CardComponent, PaginationComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
@@ -14,19 +14,22 @@ export class TableComponent {
   // raw data
   data = dogsData.dogs;
   @Input() sortByField: string = 'breedAscending';
-  @Input() filterBreedsArray: string[] = [];
-
+  @Input() filteredBreedsArray: string[] = [];
+  @Input() isFilter = false; 
 
   itemsPerPage: number = 9; 
   currentPage: number = 1; 
  
+  filteredData : any[] = [];
+  filteredDataLen : number = 0;
+  iterableDiffer;
 
-  // @Output() toggleSortByEvent = new EventEmitter<String>();
+  paginatedFilteredDataArray : any[] = []; 
+
 
   toggleFavorite(id:number) : void {
     console.log("id clicked" + id)
-    // const previousIsFavorite: boolean =  this.data[id-1].isFavorite; 
-    // this.data[id-1].isFavorite = !previousIsFavorite
+   
 
     for (let i = 0; i < this.data.length; i++) { 
       if (this.data[i].id === id) { 
@@ -37,48 +40,78 @@ export class TableComponent {
     }
   }
 
+  constructor(private iterableDiffers: IterableDiffers) {
+    this.iterableDiffer = iterableDiffers.find([]).create();
+
+  }
+
+
+
+  ngDoCheck() {
+    const changes = this.iterableDiffer.diff(this.filteredBreedsArray);
+    if (changes) {
+      console.log('items changed ' + this.filteredBreedsArray);
+      this.filterData(this.data) 
+    
+
+      // this.isFilter = this.filteredBreedsArray.length > 0; 
+      console.log("isFilter " + this.isFilter)
+      
+
+    }
+  }
+
+
 
 
   ngOnInit() {
-    this.sortData(); 
-    // if(this.filterBreedsArray.length > 0) this.filterData()
+    this.sortData(this.data); 
+
   }
 
 
   ngOnChanges() {
-    this.sortData()
-    if (this.filterBreedsArray.length > 0) this.filterData()
+    this.sortData(this.data)
+    // if(this.filteredBreedsArray.length > 0 )  this.filterData(this.data) 
+    // this.isFilter = this.filteredBreedsArray.length > 0; 
   }
 
-  // toggleSortBy(sortByField: string) : void {
-  //   console
-  //   console.log(sortByField);
-  //   this.toggleSortByEvent.emit(this.sortByField)
-  //   this.sortByField = sortByField
-  //   console.log(this.sortByField);
-  
+
+  // set filteredDataNewLen(newLen: number) { 
+  //   this.filteredDataLen = newLen; 
   // }
 
-
-  sortData() { 
+  sortData(dataArray : any[]) { 
     switch (this.sortByField) {
       case 'ageAscending':
-        this.data.sort((a,b) => a.age - b.age); 
+        dataArray.sort((a,b) => a.age - b.age); 
         break;
       case 'ageDescending': 
-        this.data.sort((a,b) => b.age - a.age);
+        dataArray.sort((a,b) => b.age - a.age);
         break; 
       case 'breedDescending':
-        this.data.sort((a, b) => b.breed.toLowerCase().localeCompare(a.breed.toLowerCase()));
+        dataArray.sort((a, b) => b.breed.toLowerCase().localeCompare(a.breed.toLowerCase()));
         break;
       default: // breedAscending
-        this.data.sort((a, b) => a.breed.toLowerCase().localeCompare(b.breed.toLowerCase()));
+        dataArray.sort((a, b) => a.breed.toLowerCase().localeCompare(b.breed.toLowerCase()));
     }
   }
 
-  filterData() {
-    this.data =  this.data.filter(item => this.filterBreedsArray.includes(item.breed));
+  filterData(dataArray: any[]) { 
+    console.log("this.filteredBreedsArray in filterDataMethd" + this.filteredBreedsArray)
+   let filtered : any[] = dataArray.filter(dog => this.filteredBreedsArray.includes(dog.breed)); 
+
+   this.filteredDataLen = filtered.length; 
+
+   console.log("this.filteredData in table.ts" + filtered)
+   this.sortData(filtered); 
+
+   this.filteredData = filtered;
+   this.filteredDataLen = filtered.length;  
+   this.paginatedFilteredDataArray = this.paginatedFilteredNewdDataArray()
+
   }
+
 
 
 
@@ -91,14 +124,31 @@ export class TableComponent {
     const start = (this.currentPage -1) * this.itemsPerPage; 
     const end = start + this.itemsPerPage;  
   
-    console.log( this.data.slice(start,end))
+    
 
     return this.data.slice(start,end);
   }
 
+
+  get paginatedFilteredData() { 
+    const start = (this.currentPage -1) * this.itemsPerPage; 
+    const end = start + this.itemsPerPage;  
+  
+    
+    return this.filteredData.slice(start,end);
+
+  }
+
+  paginatedFilteredNewdDataArray() { 
+    const start = (this.currentPage -1) * this.itemsPerPage; 
+    const end = start + this.itemsPerPage;  
+  
+    
+    return this.filteredData.slice(start,end);
+
+  }
+
   changePage(page: number) { 
-    console.log('current page '+ page);
-    console.log('id 9 favorite '+ this.data[8].isFavorite)
     this.currentPage = page;
   }
 

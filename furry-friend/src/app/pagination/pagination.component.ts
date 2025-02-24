@@ -25,6 +25,13 @@ export class PaginationComponent {
   
   }
 
+  ngOnChanges() {
+    if (this.totalItems) 
+      this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+      this.pages = Array.from({length:this.totalPages}, (_,i) => i + 1);
+  }
+
+
   pageClicked(page: number) { 
     if(page>this.totalPages) return;
     this.onClick.emit(page);

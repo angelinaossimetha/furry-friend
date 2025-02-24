@@ -22,68 +22,23 @@ export class SearchComponent {
   sortByField: string = 'breedAscending';
   breeds: string[] = breedsData.breeds; 
 
-  checkboxForm: FormGroup;
-  filterBreedsArray: string[] = [];
-
-  constructor(private fb: FormBuilder) {
-    this.checkboxForm = this.fb.group({
-      breedCheckArray: this.fb.array([])
-    });
-  }
-
-  filterData() {
-    const breedCheckArray: FormArray = this.checkboxForm.get('breedCheckArray') as FormArray;
-
-    console.log(breedCheckArray)
+  filteredBreedsArray: string[] = [];
+  isFilter: boolean = false; 
   
-    // this.filteredData = this.data.filter(item => {
-    //   const brandMatch = brandCheckArray.value.some(brand => item.brand === brand);
-    //   const colorMatch = colorCheckArray.value.some(color => item.color === color);
-    //   return brandMatch || colorMatch;
-    // });
-  }
 
-  updateFilterBreedArray(breed: string) { 
-    // const breedCheckArray: FormArray = this.checkboxForm.get('breedCheckArray') as FormArray;
-
-    // console.log(breedCheckArray) 
-
-    // let newArr = breedCheckArray.value
-    // console.log(newArr)
-    // return newArr;
-
-    let len = this.filterBreedsArray.length
-
-    if (len === 0) {
-      this.filterBreedsArray.push(breed);
-      return;
+  updatefilteredBreeds(breed : string) {
+    if (this.filteredBreedsArray.includes(breed)) {
+      let valueToRemove = breed;
+      let index = this.filteredBreedsArray.indexOf(valueToRemove);
+      if (index !== -1) {
+        this.filteredBreedsArray.splice(index, 1);
+      }
+    } else {
+      this.filteredBreedsArray.push(breed);
     }
-
-    for (let i = 0; i < this.filterBreedsArray.length; i++ ) {
-      if (this.filterBreedsArray[i] === breed) { 
-        this.filterBreedsArray.splice(i, i);
-        return;
-      } 
-    }
-
-    this.filterBreedsArray.push(breed);
-
-    console.log("filtered array" +this.filterBreedsArray);
- 
+    this.isFilter = this.filteredBreedsArray.length > 0; 
+    console.log('filtered breeds array '+ this.filteredBreedsArray );
   }
-
   
-  // toggleSortBy(sortByField: string) : void {
-  //   this.sortByField = sortByField; 
-  // }
-
-  
-  // toggleSortBy(sortByField: string) : void {
-  //   // this.sortByField = sortByField; 
-  //   }
-  
-
-  
-
   
 }
