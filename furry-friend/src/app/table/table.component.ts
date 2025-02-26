@@ -40,7 +40,7 @@ export class TableComponent {
     }
   }
 
-  constructor(private iterableDiffers: IterableDiffers) {
+  constructor(private iterableDiffers: IterableDiffers, private changeDetectorRef: ChangeDetectorRef) {
     this.iterableDiffer = iterableDiffers.find([]).create();
 
   }
@@ -52,12 +52,13 @@ export class TableComponent {
     if (changes) {
       console.log('items changed ' + this.filteredBreedsArray);
       this.filterData(this.data) 
-    
-
       // this.isFilter = this.filteredBreedsArray.length > 0; 
       console.log("isFilter " + this.isFilter)
-      
-
+    } else { 
+      if (this.filteredBreedsArray.length > 0) {this.sortData(this.filteredData); console.log("lol");}
+      else { 
+        this.sortData(this.data);
+      } 
     }
   }
 
@@ -66,6 +67,7 @@ export class TableComponent {
 
   ngOnInit() {
     this.sortData(this.data); 
+    this.changeDetectorRef.detectChanges();
 
   }
 
@@ -134,6 +136,7 @@ export class TableComponent {
     const start = (this.currentPage -1) * this.itemsPerPage; 
     const end = start + this.itemsPerPage;  
   
+    
     
     return this.filteredData.slice(start,end);
 

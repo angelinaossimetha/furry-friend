@@ -29,6 +29,7 @@ export class PaginationComponent {
     if (this.totalItems) 
       this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
       this.pages = Array.from({length:this.totalPages}, (_,i) => i + 1);
+      
   }
 
 
