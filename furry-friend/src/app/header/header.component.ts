@@ -13,6 +13,10 @@ export class HeaderComponent {
   @Input() isVisibleMatchBtn: boolean = false;
   @Input() isVisibleLogoutBtn: boolean = false;
 
+  onLogout() { 
+    localStorage.clear();
+  }
+
 
 
 }

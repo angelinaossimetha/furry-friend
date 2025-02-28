@@ -38,10 +38,8 @@ export class TableComponent {
 
         var favorites: any = localStorage.getItem('favorites');
         var favorites1: any[] = JSON.parse(favorites)
-        console.log(favorites)
-        // if (favorites) {
-
-        // }
+        // console.log(favorites)
+     
 
         if (previousIsFavorite) {
           favorites1 = favorites1.filter(dog => dog.id != id);

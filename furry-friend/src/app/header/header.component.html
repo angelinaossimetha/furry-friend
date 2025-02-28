@@ -16,7 +16,7 @@
                 <a routerLink="/match" routerLinkActive="active">
                     <button *ngIf="isVisibleMatchBtn" type="button" class="btn btn-dark" id="match-btn">Match</button>
                 </a>
-                <a routerLink="/logout" routerLinkActive="active">
+                <a (click)="onLogout()" routerLink="/logout" routerLinkActive="active">
                     <button *ngIf="isVisibleLogoutBtn" type="button" class="btn btn-dark">Logout</button> 
                 </a>
                

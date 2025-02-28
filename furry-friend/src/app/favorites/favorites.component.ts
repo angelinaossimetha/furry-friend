@@ -20,34 +20,51 @@ export class FavoritesComponent {
 
   favorites: any[] = [];
 
+
+  constructor() {
+    var favorites: any = localStorage.getItem('favorites');
+    this.favorites = JSON.parse(favorites)
+  }
+
+  ngOnInit() {
+    var favorites: any = localStorage.getItem('favorites');
+    this.favorites = JSON.parse(favorites)
+  }
+
   toggleFavorite(id:number) : void {
     console.log("id clicked" + id)
    
 
     for (let i = 0; i < this.favorites.length; i++) { 
-      // if (this.favorites[i].id === id) { 
-      //   const previousIsFavorite: boolean =  this.favorites[i].isFavorite; 
-      //   this.favorites[i].isFavorite = !previousIsFavorite
+      if (this.favorites[i].id === id) { 
+        const previousIsFavorite: boolean =  this.favorites[i].isFavorite; 
+        this.favorites[i].isFavorite = !previousIsFavorite
 
         
+        if (previousIsFavorite) {
+          this.favorites = this.favorites.filter(dog => dog.id != id);
+          localStorage.setItem('favorites', JSON.stringify(this.favorites));
 
-      //   var favorites = localStorage.getItem('favorites');
-      //   console.log(favorites)
-      //   if (favorites) {
+        } else { 
+          this.favorites.push(this.favorites[i]);
+          localStorage.setItem('favorites', JSON.stringify(this.favorites));
+        }
 
-      //   }
+        return;
 
-      //   if (previousIsFavorite) {
-      //     // favorites = this.favorites.filter(dog => dog.id != id);
-      //     localStorage.setItem('favorites', JSON.stringify(this.favorites));
-
-      //   }
-      //   return;
-
-      // }
+      }
     }
   }
 
+  get paginatedData() { 
+   
+    const start = (this.currentPage -1) * this.itemsPerPage; 
+    const end = start + this.itemsPerPage;  
+  
+    
+
+    return this.favorites.slice(start,end);
+  }
   
   changePage(page: number) { 
     this.currentPage = page;
