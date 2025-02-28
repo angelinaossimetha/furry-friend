@@ -12,16 +12,26 @@
     <!-- <app-card [id]=1 name="mark" breed="poodle" [age]=1 zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card>
      -->
 
-     <div class="card " style="max-width: 500px;">
-      <img class="card-img-top" alt="..." src="https://cdn.create.vista.com/api/media/medium/547556894/stock-photo-goldendoodle-posing-portrait-shot-grey-background-sydney?token=" >
-      <div class="card-body">
-        <h5 class="card-title">Snickerdoodle</h5>
-        <p class="card-text">Goldendoodle</p>
-        <p class="card-text">1</p>
-        <p class="card-text">12345</p>
-        <p class="card-text">Friendly puppy</p>
+    
+    <ng-container *ngIf="hasFavorites"> 
+      <div class="card " style="max-width: 500px;">
+        <img class="card-img-top" alt="..." src={{match.img}} >
+        <div class="card-body">
+          <h5 class="card-title">{{match.name}}</h5>
+          <p class="card-text">{{match.breed}}</p>
+          <p class="card-text">{{match.age}}</p>
+          <!-- <p class="card-text">12345</p> -->
+          <!-- <p class="card-text">Friendly puppy</p> -->
+        </div>
       </div>
-    </div>
+  
+
+    </ng-container>
+    
+    <ng-container *ngIf="!hasFavorites"> 
+      <h1>Add favorites</h1>
+
+    </ng-container>
 
  
   </div>
