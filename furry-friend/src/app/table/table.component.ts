@@ -36,6 +36,23 @@ export class TableComponent {
         const previousIsFavorite: boolean =  this.data[i].isFavorite; 
         this.data[i].isFavorite = !previousIsFavorite
 
+        var favorites: any = localStorage.getItem('favorites');
+        var favorites1: any[] = JSON.parse(favorites)
+        console.log(favorites)
+        // if (favorites) {
+
+        // }
+
+        if (previousIsFavorite) {
+          favorites1 = favorites1.filter(dog => dog.id != id);
+          localStorage.setItem('favorites', JSON.stringify(favorites1));
+
+        } else { 
+          favorites1.push(this.data[i]);
+          localStorage.setItem('favorites', JSON.stringify(favorites1));
+        }
+        return;
+
       }
     }
   }
