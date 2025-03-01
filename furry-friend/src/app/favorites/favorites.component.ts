@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TableComponent } from '../table/table.component';
-import { NgFor } from '@angular/common';
+import { NgFor, CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component'; 
 import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-favorites',
-  imports: [HeaderComponent, TableComponent, CardComponent,  PaginationComponent , NgFor ],
+  imports: [HeaderComponent, TableComponent, CardComponent,  PaginationComponent , NgFor, CommonModule ],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.css'
 })

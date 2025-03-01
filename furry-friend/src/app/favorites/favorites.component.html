@@ -22,9 +22,11 @@
               <!-- </div> -->
           </div>
         </div>
-        <app-pagination [totalItems]="favorites.length" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" (onClick)="changePage($event)"></app-pagination>
-  
 
+
+        <ng-container *ngIf="favorites.length > 0"> 
+          <app-pagination [totalItems]="favorites.length" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" (onClick)="changePage($event)"></app-pagination>
+        </ng-container>
 
 
 </body>

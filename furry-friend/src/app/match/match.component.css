@@ -16,3 +16,16 @@ app-card {
   width: 100px;  /* specify a fixed width */
   height: 100px; 
 }
+
+ng-container {
+    margin-bottom: 200px;
+}
+
+h1 { 
+    margin-bottom: 50px;
+}
+
+#noFavorites {
+    font-weight: normal;
+    margin-top: 100px;
+}
