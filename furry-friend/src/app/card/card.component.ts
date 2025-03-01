@@ -18,11 +18,6 @@ export class CardComponent {
  
   @Output() toggleFavoriteEvent = new EventEmitter<Number>();
 
-  constructor() {
-   
-
-
-  }
 
   toggleFavorite() : void {
    

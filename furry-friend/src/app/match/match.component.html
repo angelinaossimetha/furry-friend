@@ -8,9 +8,7 @@
   <app-header [isVisibleSearchBtn]=isVisibleSearchBtn [isVisibleFavoritesBtn]=isVisibleFavoritesBtn [isVisibleLogoutBtn]=isVisibleLogoutBtn></app-header>
   <h1 *ngIf="hasFavorites">Your furry friend! <i class="bi bi-heart"></i></h1>
   <div id="matchResults"> 
-    <!-- div -->
-    <!-- <app-card [id]=1 name="mark" breed="poodle" [age]=1 zipCode="11111" img="https://imgs.search.brave.com/fwH5Ga-3V1MZ6is9ba8sC0zAsHwDhyo9wy4fvIxfqCI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Mi8xOS8xNS80Ni9s/YWJyYWRvci1yZXRy/aWV2ZXItMTIxMDU1/OV82NDAuanBn"></app-card>
-     -->
+   
 
     
     <ng-container *ngIf="hasFavorites"> 
@@ -20,8 +18,7 @@
           <h5 class="card-title">{{match.name}}</h5>
           <p class="card-text">Breed: {{match.breed}}</p>
           <p class="card-text">Age: {{match.age}}</p>
-          <!-- <p class="card-text">12345</p> -->
-          <!-- <p class="card-text">Friendly puppy</p> -->
+          
         </div>
       </div>
   

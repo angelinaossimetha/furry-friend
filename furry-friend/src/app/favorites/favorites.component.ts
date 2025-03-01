@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { TableComponent } from '../table/table.component';
 import { NgFor, CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component'; 
 import { PaginationComponent } from '../pagination/pagination.component';
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-favorites',
-  imports: [HeaderComponent, TableComponent, CardComponent,  PaginationComponent , NgFor, CommonModule ],
+  imports: [HeaderComponent,  CardComponent,  PaginationComponent , NgFor, CommonModule ],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.css'
 })
@@ -27,7 +26,7 @@ export class FavoritesComponent {
 
     var favorites: any = localStorage.getItem('favorites');
     if (!favorites) {
-      this.router.navigate(['/login']); // Replace '/home' with your actual home route path
+      this.router.navigate(['/login']); 
     }
 
     this.favorites = JSON.parse(favorites)
@@ -39,7 +38,6 @@ export class FavoritesComponent {
   }
 
   toggleFavorite(id:number) : void {
-    console.log("id clicked" + id)
    
 
     for (let i = 0; i < this.favorites.length; i++) { 

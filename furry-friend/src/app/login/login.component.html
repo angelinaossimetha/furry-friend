@@ -17,18 +17,16 @@
           <input type="email" class="form-control" id="email" placeholder="Email" name='email' [(ngModel)]="email">
         </div>
         <div class="text-center">
-          <!-- <a  routerLink="onLogin()" routerLinkActive="active"> -->
+         
           <a (click)="onLogin()" routerLink="/search" routerLinkActive="active">
                 <button  class="btn btn-dark">Login</button>
             </a>
-            <!-- <button (click)="navigateToAnotherComponent()">Login</button> -->
+            
           </div>
         
       </form>
 </div>
-<!-- <app-footer></app-footer> -->
 
-<!-- <router-outlet></router-outlet> -->
 
 </body>
 </html>

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { CardComponent } from '../card/card.component';
 import { CommonModule} from '@angular/common';
 import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-match',
-  imports: [HeaderComponent, CardComponent, CommonModule],
+  imports: [HeaderComponent,  CommonModule],
   templateUrl: './match.component.html',
   styleUrl: './match.component.css'
 })
@@ -20,7 +19,7 @@ export class MatchComponent {
   constructor(private router: Router) { 
     var favorites: any = localStorage.getItem('favorites');
     if (!favorites) {
-      this.router.navigate(['/login']); // Replace '/home' with your actual home route path
+      this.router.navigate(['/login']);
     }
 
 
@@ -39,10 +38,5 @@ export class MatchComponent {
   }
 
 
-  // ngOnInit() {
-  //   const variable = localStorage.getItem('favorites');
-  //   if (!variable) {
-  //     this.router.navigate(['/login']); // Replace '/home' with your actual home route path
-  //   }
-  // }
+
 }

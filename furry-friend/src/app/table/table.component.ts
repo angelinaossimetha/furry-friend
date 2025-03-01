@@ -1,4 +1,4 @@
-import {  Component, EventEmitter, Input, IterableDiffers, Output,  ChangeDetectorRef} from '@angular/core';
+import {  Component, Input, IterableDiffers,  ChangeDetectorRef} from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { CommonModule, NgFor } from '@angular/common';
@@ -30,9 +30,7 @@ export class TableComponent {
 
 
   toggleFavorite(id:number) : void {
-    console.log("id clicked" + id)
    
-
     for (let i = 0; i < this.data.length; i++) { 
       if (this.data[i].id === id) { 
         const previousIsFavorite: boolean =  this.data[i].isFavorite; 
@@ -40,7 +38,7 @@ export class TableComponent {
 
         var favorites: any = localStorage.getItem('favorites');
         var favorites1: any[] = JSON.parse(favorites)
-        // console.log(favorites)
+       
      
 
         if (previousIsFavorite) {
@@ -67,10 +65,9 @@ export class TableComponent {
   ngDoCheck() {
     const changes = this.iterableDiffer.diff(this.filteredBreedsArray);
     if (changes) {
-      console.log('items changed ' + this.filteredBreedsArray);
+    
       this.filterData(this.data) 
-      // this.isFilter = this.filteredBreedsArray.length > 0; 
-      console.log("isFilter " + this.isFilter)
+     
     } else { 
       if (this.filteredBreedsArray.length > 0) {this.sortData(this.filteredData);}
       else { 
@@ -132,12 +129,11 @@ export class TableComponent {
   }
 
   filterData(dataArray: any[]) { 
-    console.log("this.filteredBreedsArray in filterDataMethd" + this.filteredBreedsArray)
+   
    let filtered : any[] = dataArray.filter(dog => this.filteredBreedsArray.includes(dog.breed)); 
 
    this.filteredDataLen = filtered.length; 
 
-   console.log("this.filteredData in table.ts" + filtered)
    this.sortData(filtered); 
 
    this.filteredData = filtered;

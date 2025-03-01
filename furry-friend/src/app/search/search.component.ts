@@ -1,19 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component} from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { CardComponent } from '../card/card.component';
 import { TableComponent } from '../table/table.component';
-import { FilterComponent } from '../filter/filter.component';
 import * as breedsData from '../../../public/breeds.json'
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';   
 
 @Component({
   selector: 'app-search',
-  imports: [HeaderComponent, CardComponent, TableComponent, FilterComponent, FormsModule, NgFor,  ReactiveFormsModule, FooterComponent],
+  imports: [HeaderComponent,  TableComponent,  FormsModule, NgFor,  ReactiveFormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
@@ -31,7 +27,7 @@ export class SearchComponent {
   constructor(private router: Router) {
     var favorites: any = localStorage.getItem('favorites');
     if (!favorites) {
-      this.router.navigate(['/login']); // Replace '/home' with your actual home route path
+      this.router.navigate(['/login']); 
     }
   }
 
@@ -46,7 +42,6 @@ export class SearchComponent {
       this.filteredBreedsArray.push(breed);
     }
     this.isFilter = this.filteredBreedsArray.length > 0; 
-    console.log('filtered breeds array '+ this.filteredBreedsArray );
   }
   
   

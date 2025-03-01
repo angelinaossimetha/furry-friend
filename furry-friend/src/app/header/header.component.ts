@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {  CommonModule } from '@angular/common'; 
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-header',
