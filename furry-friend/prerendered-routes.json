@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/https:/github.com/angelinaossimetha/furry-friend.git": {},
+    "/https:/github.com/angelinaossimetha/furry-friend.git/favorites": {},
+    "/https:/github.com/angelinaossimetha/furry-friend.git/login": {},
+    "/https:/github.com/angelinaossimetha/furry-friend.git/logout": {},
+    "/https:/github.com/angelinaossimetha/furry-friend.git/match": {},
+    "/https:/github.com/angelinaossimetha/furry-friend.git/search": {}
+  }
+}

@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'index.html',
+  basePath: 'https://github.com/angelinaossimetha/furry-friend.git',
   supportedLocales: {
   "en-US": ""
 },
