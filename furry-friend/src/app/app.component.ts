@@ -7,10 +7,11 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { MatchComponent } from './match/match.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { CardComponent } from "./card/card.component"; 
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, LoginComponent, SearchComponent, TableComponent, FavoritesComponent, MatchComponent, PaginationComponent, CardComponent],
+  imports: [RouterOutlet, RouterLink, LoginComponent, SearchComponent, TableComponent, FavoritesComponent, MatchComponent, PaginationComponent, CardComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

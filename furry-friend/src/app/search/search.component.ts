@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-search',
-  imports: [HeaderComponent, CardComponent, TableComponent, FilterComponent, FormsModule, NgFor,  ReactiveFormsModule],
+  imports: [HeaderComponent, CardComponent, TableComponent, FilterComponent, FormsModule, NgFor,  ReactiveFormsModule, FooterComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
