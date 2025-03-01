@@ -2,13 +2,13 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'index.html',
+  baseHref: 'C:/Program Files/Git/furry-friend/',
   locale: undefined,
   routes: undefined,
   entryPointToBrowserMapping: {},
   assets: {
-    'index.csr.html': {size: 27887, hash: '5c079ed4d801fbcf9a52d4bf5733a3af03b72ef97c6c02fe821824778d520a19', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17190, hash: '1040810fb4d7202a9a89dd3382c5e29da67838efff8a2019eec7ba2978c5843d', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 27913, hash: '8ba90c3d4e3ac34e66375e0aacca227d7364130d974409c74e483388544dec2b', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17216, hash: 'c7fc66c54e7dbd9c9019ecf5d6764c735c6f9b8c0fe007d68106361ace046bc6', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
     'styles-7JS7GIZR.css': {size: 238590, hash: 'BLck8M/le/E', text: () => import('./assets-chunks/styles-7JS7GIZR_css.mjs').then(m => m.default)}
   },
 };
