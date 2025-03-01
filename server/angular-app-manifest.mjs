@@ -2,13 +2,13 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'https://angelinaossimetha.github.io/furry-friend',
+  baseHref: '/',
   locale: undefined,
   routes: undefined,
   entryPointToBrowserMapping: {},
   assets: {
-    'index.csr.html': {size: 27925, hash: '6cfb02cba4972dddab4af4fe5e718910a97a488c14f39823bd6e3577978a90fe', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17228, hash: '4ff12dec0beb16a4b96bc2c2a6c028d00499a6905a54479785e57ced90386d6e', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 27878, hash: 'e81094254974b49e2aa07cbe6a9873c2fb4c8ea2ad2ed8aea1712ab68dc0f28d', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17181, hash: '51814f0df3239b2da6155c2701d0497312af41770f010880062c73790bc4f1f1', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
     'styles-7JS7GIZR.css': {size: 238590, hash: 'BLck8M/le/E', text: () => import('./assets-chunks/styles-7JS7GIZR_css.mjs').then(m => m.default)}
   },
 };
