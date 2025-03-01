@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/": {},
-    "/favorites": {},
-    "/login": {},
-    "/logout": {},
-    "/match": {},
-    "/search": {}
+    "/index.html": {},
+    "/index.html/favorites": {},
+    "/index.html/login": {},
+    "/index.html/logout": {},
+    "/index.html/match": {},
+    "/index.html/search": {}
   }
 }

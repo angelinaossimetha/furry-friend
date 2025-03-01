@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: 'index.html',
   supportedLocales: {
   "en-US": ""
 },
