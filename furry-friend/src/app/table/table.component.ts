@@ -26,6 +26,8 @@ export class TableComponent {
 
   paginatedFilteredDataArray : any[] = []; 
 
+  
+
 
   toggleFavorite(id:number) : void {
     console.log("id clicked" + id)
@@ -70,11 +72,30 @@ export class TableComponent {
       // this.isFilter = this.filteredBreedsArray.length > 0; 
       console.log("isFilter " + this.isFilter)
     } else { 
-      if (this.filteredBreedsArray.length > 0) {this.sortData(this.filteredData); console.log("lol");}
+      if (this.filteredBreedsArray.length > 0) {this.sortData(this.filteredData);}
       else { 
         this.sortData(this.data);
       } 
     }
+
+    var favorites: any = localStorage.getItem('favorites');
+    var favorites1: any[] = JSON.parse(favorites)
+    const localStorageFavoritesChanges = this.iterableDiffer.diff(favorites1);
+    
+    if (localStorageFavoritesChanges) {
+      var set = new Set();
+      for (let j = 0; j < favorites1.length; j++ ) { 
+       set.add(favorites1[j].id); 
+      }
+      
+      
+      for (let i = 0; i < this.data.length; i++) { 
+        if (!set.has(this.data[i].id)) {
+          this.data[i].isFavorite = false;
+        }
+    }
+  }
+
   }
 
 
@@ -89,14 +110,10 @@ export class TableComponent {
 
   ngOnChanges() {
     this.sortData(this.data)
-    // if(this.filteredBreedsArray.length > 0 )  this.filterData(this.data) 
-    // this.isFilter = this.filteredBreedsArray.length > 0; 
+
   }
 
 
-  // set filteredDataNewLen(newLen: number) { 
-  //   this.filteredDataLen = newLen; 
-  // }
 
   sortData(dataArray : any[]) { 
     switch (this.sortByField) {

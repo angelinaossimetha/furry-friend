@@ -9,6 +9,7 @@ import { NgFor } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from '../footer/footer.component';
+import { Router } from '@angular/router';   
 
 @Component({
   selector: 'app-search',
@@ -16,6 +17,7 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
+
 export class SearchComponent {
   isVisibleFavoritesBtn: boolean = true; 
   isVisibleMatchBtn: boolean = true;
@@ -26,6 +28,12 @@ export class SearchComponent {
   filteredBreedsArray: string[] = [];
   isFilter: boolean = false; 
   
+  constructor(private router: Router) {
+    var favorites: any = localStorage.getItem('favorites');
+    if (!favorites) {
+      this.router.navigate(['/login']); // Replace '/home' with your actual home route path
+    }
+  }
 
   updatefilteredBreeds(breed : string) {
     if (this.filteredBreedsArray.includes(breed)) {

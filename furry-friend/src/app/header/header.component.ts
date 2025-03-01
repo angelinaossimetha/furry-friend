@@ -12,6 +12,7 @@ export class HeaderComponent {
   @Input() isVisibleFavoritesBtn: boolean = false;
   @Input() isVisibleMatchBtn: boolean = false;
   @Input() isVisibleLogoutBtn: boolean = false;
+  @Input() isVisibleSearchBtn: boolean = false;
 
   onLogout() { 
     localStorage.clear();

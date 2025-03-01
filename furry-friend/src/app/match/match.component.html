@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-  <app-header [isVisibleLogoutBtn]=isVisibleLogoutBtn></app-header>
+  <app-header [isVisibleSearchBtn]=isVisibleSearchBtn [isVisibleFavoritesBtn]=isVisibleFavoritesBtn [isVisibleLogoutBtn]=isVisibleLogoutBtn></app-header>
   <h1 *ngIf="hasFavorites">Your furry friend! <i class="bi bi-heart"></i></h1>
   <div id="matchResults"> 
     <!-- div -->
@@ -18,8 +18,8 @@
         <img class="card-img-top" alt="..." src={{match.img}} >
         <div class="card-body">
           <h5 class="card-title">{{match.name}}</h5>
-          <p class="card-text">{{match.breed}}</p>
-          <p class="card-text">{{match.age}}</p>
+          <p class="card-text">Breed: {{match.breed}}</p>
+          <p class="card-text">Age: {{match.age}}</p>
           <!-- <p class="card-text">12345</p> -->
           <!-- <p class="card-text">Friendly puppy</p> -->
         </div>

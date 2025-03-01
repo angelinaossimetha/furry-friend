@@ -4,6 +4,7 @@ import { TableComponent } from '../table/table.component';
 import { NgFor, CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component'; 
 import { PaginationComponent } from '../pagination/pagination.component';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-favorites',
@@ -14,6 +15,7 @@ import { PaginationComponent } from '../pagination/pagination.component';
 export class FavoritesComponent { 
   isVisibleMatchBtn: boolean = true;
   isVisibleLogoutBtn: boolean = true; 
+  isVisibleSearchBtn: boolean = true; 
 
   itemsPerPage: number = 9; 
   currentPage: number = 1; 
@@ -21,8 +23,13 @@ export class FavoritesComponent {
   favorites: any[] = [];
 
 
-  constructor() {
+  constructor(private router: Router) {
+
     var favorites: any = localStorage.getItem('favorites');
+    if (!favorites) {
+      this.router.navigate(['/login']); // Replace '/home' with your actual home route path
+    }
+
     this.favorites = JSON.parse(favorites)
   }
 

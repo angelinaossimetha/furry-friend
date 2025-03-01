@@ -10,6 +10,7 @@ export const routes: Routes = [
     {path: 'search', component: SearchComponent }, 
     {path: 'match', component: MatchComponent }, 
     {path: 'favorites', component:  FavoritesComponent },
+    {path: 'login', component: LoginComponent}, 
     {path: 'logout', redirectTo: ''},
     { path: '**', redirectTo: '' }, // Redirect any unmatched route to login
 
