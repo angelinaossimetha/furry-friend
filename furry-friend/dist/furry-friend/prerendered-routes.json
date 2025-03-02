@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/src/app": {},
-    "/src/app/favorites": {},
-    "/src/app/login": {},
-    "/src/app/logout": {},
-    "/src/app/match": {},
-    "/src/app/search": {}
+    "/C:/Program Files/Git/furry-friend": {},
+    "/C:/Program Files/Git/furry-friend/favorites": {},
+    "/C:/Program Files/Git/furry-friend/login": {},
+    "/C:/Program Files/Git/furry-friend/logout": {},
+    "/C:/Program Files/Git/furry-friend/match": {},
+    "/C:/Program Files/Git/furry-friend/search": {}
   }
 }
