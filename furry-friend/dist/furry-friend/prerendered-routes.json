@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/src/app": {},
+    "/src/app/favorites": {},
+    "/src/app/login": {},
+    "/src/app/logout": {},
+    "/src/app/match": {},
+    "/src/app/search": {}
+  }
+}
