@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/furry-friend": {},
-    "/furry-friend/favorites": {},
-    "/furry-friend/login": {},
-    "/furry-friend/logout": {},
-    "/furry-friend/match": {},
-    "/furry-friend/search": {}
+    "/src/app": {},
+    "/src/app/favorites": {},
+    "/src/app/login": {},
+    "/src/app/logout": {},
+    "/src/app/match": {},
+    "/src/app/search": {}
   }
 }
